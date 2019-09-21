@@ -20,10 +20,20 @@ npm install
 
 To run the entire application, you'll need to keep both the client and server running.
 
+Create a `.env` file with all the required information and environment variables:
+```
+# Content of your .env file:
+MONGO_USER=your_own_username
+MONGO_PASSWORD=your_super_secretive_password
+MONGO_DB=your_wonderful_database_name
+```
+
+
 Running Node.js backend:
 
 ```
 cd simple-book-library/server
+npm install
 nodemon app
 ```
 
@@ -31,10 +41,11 @@ Running the front-end client server:
 
 ```
 cd simple-book-library/client
+npm install
 npm start
 ```
 
-Update all the MongoDB details accordingly at `simple-book-library/server/app.js`.
+Enjoy!
 
 ## Contributing
 
