@@ -3,6 +3,8 @@ const graphqlHTTP = require('express-graphql');
 const schema = require('./schema/schema');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const dotenv  = require('dotenv');
+dotenv.config();
 
 const app = express();
 
@@ -10,8 +12,7 @@ const app = express();
 app.use(cors());
 
 // Connect to mLab database
-// Seems like this is blocked by proxy
-const URI = "mongodb+srv://jerry:Jerry12345!@graphql-jerry-wfbgv.mongodb.net/test?retryWrites=true&w=majority";
+const URI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@graphql-jerry-wfbgv.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`;
 mongoose.connect(URI, { useNewUrlParser:true });
 mongoose.connection.once('open', () => {
     console.log("Connected to the database.");
