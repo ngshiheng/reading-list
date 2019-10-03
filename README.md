@@ -2,7 +2,7 @@
 
 ![alt text](https://i.imgur.com/BDhMcsb.png)
 
-This is a simple book library web application which is built using:
+This is a simple reading list web application which is built using:
 
 - Frontend: *React, Apollo*
 
