@@ -1,4 +1,6 @@
-# Simple Book Library
+# Reading List
+
+![alt text](https://i.imgur.com/BDhMcsb.png)
 
 This is a simple book library web application which is built using:
 
@@ -20,29 +22,33 @@ npm install
 
 To run the entire application, you'll need to keep both the client and server running.
 
-Create a `.env` file with all the required information and environment variables:
+Create a `.env` file with all the required information and environment variables
 ```
-# Content of your .env file:
+$ touch .env
+```
+
+Example of how your `.env` file should look like:
+```
 MONGO_USER=your_own_username
 MONGO_PASSWORD=your_super_secretive_password
 MONGO_DB=your_wonderful_database_name
 ```
 
 
-Running Node.js backend:
+Running the Node.js backend:
 
 ```
-cd simple-book-library/server
-npm install
-nodemon app
+$ cd simple-book-library/server
+$ npm install
+$ nodemon app
 ```
 
-Running the front-end client server:
+Running the React front-end client server:
 
 ```
-cd simple-book-library/client
-npm install
-npm start
+$ cd simple-book-library/client
+$ npm install
+$ npm start
 ```
 
 Enjoy!
