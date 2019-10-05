@@ -2,6 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:4000",
   "dependencies": {
     "apollo-boost": "^0.4.4",
     "cors": "^2.8.5",

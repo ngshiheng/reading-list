@@ -40,7 +40,7 @@ Running the Node.js backend:
 ```
 $ cd simple-book-library/server
 $ npm install
-$ nodemon app
+$ npm start
 ```
 
 Running the React front-end client server:
