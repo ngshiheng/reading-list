@@ -12,15 +12,13 @@ This is a simple reading list web application which is built using:
 
 ## Installation
 
-Use the package manager [npm](https://docs.npmjs.com/cli/install) to install the dependencies.
+Use the package manager [npm](https://docs.npmjs.com/cli/install) to install the all dependencies.
 
 ```bash
 npm install
 ```
 
 ## Usage
-
-To run the entire application, you'll need to keep both the client and server running.
 
 Create a `.env` file with all the required information and environment variables
 ```
@@ -34,21 +32,10 @@ MONGO_PASSWORD=your_super_secretive_password
 MONGO_DB=your_wonderful_database_name
 ```
 
-
-Running the Node.js backend:
-
+Running the application on your local host:
 ```
-$ cd simple-book-library/server
-$ npm install
-$ npm start
-```
-
-Running the React front-end client server:
-
-```
-$ cd simple-book-library/client
-$ npm install
-$ npm start
+cd server
+npm start
 ```
 
 Enjoy!
