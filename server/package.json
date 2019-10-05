@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm run server\" \"cd ../client && npm start\"",
+    "server": "nodemon app.js"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,8 @@
     "express-graphql": "^0.9.0",
     "graphql": "^14.5.6",
     "mongoose": "^5.7.1"
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.2"
   }
 }
