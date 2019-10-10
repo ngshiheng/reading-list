@@ -1,5 +1,7 @@
 # Reading List
 
+[![Build Status](https://travis-ci.org/ngshiheng/reading-list.svg?branch=master)](https://travis-ci.org/ngshiheng/reading-list)
+
 ![alt text](https://i.imgur.com/BDhMcsb.png)
 
 This is a simple reading list web application which is built using:
