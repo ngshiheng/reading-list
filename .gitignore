@@ -91,3 +91,4 @@ public
 # DynamoDB Local files
 .dynamodb/
 .vscode/
+data
