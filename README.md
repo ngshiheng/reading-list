@@ -4,11 +4,11 @@
 
 This is a simple reading list web application which is built using:
 
-- Frontend: *React, Apollo*
+- Frontend: _React, Apollo_
 
-- Backend: *Node.js Express + GraphQL*
+- Backend: _Node.js Express + GraphQL_
 
-- Database: *MongoDB*
+- Database: _MongoDB_
 
 ## Installation
 
@@ -20,25 +20,47 @@ npm install
 
 ## Usage
 
-Create a `.env` file with all the required information and environment variables
+Create an `.env` file in the `server` folder. _This step is crucial if you want to use Docker_
+
 ```
+$ cd server
 $ touch .env
 ```
 
 Example of how your `.env` file should look like:
+
 ```
 MONGO_USER=your_own_username
 MONGO_PASSWORD=your_super_secretive_password
 MONGO_DB=your_wonderful_database_name
 ```
 
-Running the application on your local host:
+### Normal deployment
+
+Starting the GraphQL API backend server first:
+
 ```
 cd server
+npm
+```
+
+`cd` back to the project directory, then start the React frontend:
+
+```
+cd client
 npm start
 ```
 
 Enjoy!
+
+### Using Docker
+
+Make sure you have Docker installed in your machine
+
+```
+docker-compose build
+docker-compose up
+```
 
 ## Contributing
 
