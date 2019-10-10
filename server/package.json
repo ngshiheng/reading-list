@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently \"npm run server\" \"cd ../client && npm start\"",
+    "start": "nodemon app.js",
+    "start_concurrently": "concurrently \"npm run server\" \"cd ../client && npm start\"",
     "server": "nodemon app.js"
   },
   "author": "",
@@ -15,7 +16,8 @@
     "express": "^4.17.1",
     "express-graphql": "^0.9.0",
     "graphql": "^14.5.6",
-    "mongoose": "^5.7.1"
+    "mongoose": "^5.7.1",
+    "nodemon": "^1.19.3"
   },
   "devDependencies": {
     "concurrently": "^4.1.2"
