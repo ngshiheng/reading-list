@@ -1,0 +1,16 @@
+sudo: required
+services:
+  - docker
+
+script:
+  - docker build -t ngshiheng/reading-list .
+  - docker images ngshiheng/reading-list
+
+before_deploy:
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+
+deploy:
+  provider: script
+  script: docker push ngshiheng/reading-list
+  on:
+    branch: master
