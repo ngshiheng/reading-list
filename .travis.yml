@@ -4,13 +4,13 @@ services:
 
 script:
   - docker-compose build
-  - docker images ngshiheng/reading-list
+  - docker images ngshiheng/*
 
 before_deploy:
   - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 
 deploy:
   provider: script
-  script: docker push ngshiheng/reading-list
+  script: docker-compose push
   on:
     branch: master

@@ -4,12 +4,14 @@ services:
     container_name: app
     restart: always
     build: ./server
+    image: ngshiheng/server
     ports:
       - "4000:4000"
   client:
     container_name: client
     restart: always
     build: ./client
+    image: ngshiheng/client
     ports:
       - "3000:3000"
     links:
