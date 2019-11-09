@@ -1,16 +1,16 @@
 sudo: required
 services:
-  - docker
+    - docker
 
 script:
-  - docker-compose build
-  - docker images ngshiheng/*
+    - docker-compose build
+    - docker images ngshiheng/*
 
 before_deploy:
-  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+    - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
 
 deploy:
-  provider: script
-  script: docker-compose push
-  on:
-    branch: master
+    provider: script
+    script: docker-compose push
+    on:
+        branch: master
