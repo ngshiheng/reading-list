@@ -12,8 +12,9 @@ white=`tput sgr0`
 
 # functions
 npm_install () {
+    echo "⌛ $white Running npm install at $1"
     (cd $1 && npm i)
-    echo "$green✓$white Running npm install at $1"
+    echo "$green✓$white Completed npm install at $1"
 }
 
 echo_finish () {
