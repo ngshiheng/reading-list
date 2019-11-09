@@ -18,27 +18,27 @@ The main purpose of building this application is to have a quick taste of the li
 
 ## Requirements :notebook:
 
--   [Node.js](https://nodejs.org/en/) v11 OR above
+-   [Node.js](https://nodejs.org/en/) v11 OR above.
 
--   Package manager [npm](https://docs.npmjs.com/cli/install) to install the all dependencies
+-   Package manager [npm](https://docs.npmjs.com/cli/install) to install the all dependencies.
 
--   Setup a [MongoDB](https://www.mongodb.com/) account and create a database there
+-   Setup a [MongoDB](https://www.mongodb.com/) account and create a database there.
 
--   Setup environment variables in `.env` file, place it in the `/server` folder
+-   Setup environment variables in `.env` file, place it in the `/server` folder.
     -   _Reference: `.env.example`_
 
 ## Setup for Ubuntu :nut_and_bolt:
 
 This project is tested and develop on Ubuntu 18.04 LTS.
 
-### Bash Script :page_with_curl:
+### Using Bash Script :page_with_curl:
 
 ```bash
 ./setup.sh
 ./run.sh
 ```
 
-### Manual Way :hammer:
+### Using Manual Method :hammer:
 
 Setup for Linux users
 
@@ -64,9 +64,9 @@ cd client
 npm start
 ```
 
-### Docker :whale:
+### Using Docker :whale:
 
-Make sure you have [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) installed on your machine
+Make sure you have [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) installed on your machine.
 
 ```
 docker-compose build
@@ -75,9 +75,11 @@ docker-compose up
 
 ## Contributing :family:
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+-   Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
+-   Please run `./lint.sh` before commiting any code and make sure it passes all the lint and format check
+
+-   Please make sure to update tests as appropriate.
 
 ## License :oncoming_police_car:
 
