@@ -16,24 +16,6 @@ const {
     GraphQLNonNull,
 } = graphql;
 
-// Dummy data
-/*
-let books = [
-    {name: 'Name of the Wind', genre: 'Fantasy', id: '1', authorId: "1"},
-    {name: 'The Final Empire', genre: 'Fantasy', id: '2', authorId: "2"},
-    {name: 'The Long Earth', genre: 'Sci-Fi', id: '3', authorId: "3"},
-    {name: 'The Hero of Ages', genre: 'Fantasy', id: '4', authorId: "2"},
-    {name: 'The Color of Magic', genre: 'Fantasy', id: '5', authorId: "3"},
-    {name: 'The Light Fantastic', genre: 'Fantasy', id: '6', authorId: "3"},
-];
-
-let authors = [
-    {name: 'Jerry Kim', age:44, id:'1'},
-    {name: 'Joanne Anastasia', age:50, id:'2'},
-    {name: 'John Smith', age:26, id:'3'},
-];
-*/
-
 // Object types
 // fields is wrapped inside an arrow function because if you do not do so, the script will run top to bottom and it will complain that Book/Author type is not defined yet.
 // If you wrap it inside a function, the fields will only be executed after the entire script is read
@@ -47,7 +29,6 @@ const BookType = new GraphQLObjectType({
         author: {
             type: AuthorType,
             resolve(parent, args) {
-                // return _.find(authors, {id: parent.authorId});      // Parent is 'Book'
                 return Author.findById(parent.authorId);
             },
         },
@@ -64,7 +45,6 @@ const AuthorType = new GraphQLObjectType({
             // Each author might have a list of books, not just a single book, hence we need to use GraphQLList
             type: new GraphQLList(BookType),
             resolve(parent, args) {
-                // return _.filter(books, {authorId: parent.id});      // Parent is 'Author'
                 return Book.find({ authorId: parent.id });
             },
         },
@@ -81,8 +61,6 @@ const RootQuery = new GraphQLObjectType({
 
             // When receive the query:
             resolve(parent, args) {
-                //code to get data from db/other sources
-                // return _.find(books, {id: args.id});
                 return Book.findById(args.id);
             },
         },
@@ -90,21 +68,18 @@ const RootQuery = new GraphQLObjectType({
             type: AuthorType,
             args: { id: { type: GraphQLID } },
             resolve(parent, args) {
-                // return _.find(authors, {id: args.id});
                 return Author.findById(args.id);
             },
         },
         books: {
             type: new GraphQLList(BookType),
             resolve(parent, args) {
-                // return books;
                 return Book.find({});
             },
         },
         authors: {
             type: new GraphQLList(AuthorType),
             resolve(parents, args) {
-                // return authors;
                 return Author.find({});
             },
         },
@@ -152,22 +127,3 @@ module.exports = new GraphQLSchema({
     query: RootQuery,
     mutation: Mutation,
 });
-
-// Example of GraphQL query:
-/*
-
-book(id: "2"){
-    name
-    genre
-}
-
-{
-    author(id: 1){
-      name
-      id
-      age
-      
-    }
-  }
-
-*/
