@@ -9,7 +9,7 @@
         "lint": "concurrently \"npm run lint:eslint\" \"npm run lint:prettier\"",
         "lint:eslint": "eslint . --ext js",
         "lint:eslint:fix": "eslint --fix . --ext js",
-        "lint:prettier": "prettier \"./**/*.{js,yml}\" -l",
+        "lint:prettier": "prettier \"./**/*.{js,yml}\" -c",
         "lint:prettier:fix": "prettier \"./**/*.{js,yml}\" --write"
     },
     "author": "",
