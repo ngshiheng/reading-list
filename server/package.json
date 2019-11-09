@@ -5,7 +5,12 @@
     "main": "index.js",
     "scripts": {
         "start": "nodemon app.js",
-        "dev": "concurrently \"npm run start\" \"cd ../client && npm start\""
+        "dev": "concurrently \"npm run start\" \"cd ../client && npm start\"",
+        "lint": "concurrently \"npm run lint:eslint\" \"npm run lint:prettier\"",
+        "lint:eslint": "eslint . --ext js",
+        "lint:eslint:fix": "eslint --fix . --ext js",
+        "lint:prettier": "prettier \"./**/*.{js,yml}\" -l",
+        "lint:prettier:fix": "prettier \"./**/*.{js,yml}\" --write"
     },
     "author": "",
     "license": "ISC",
@@ -19,6 +24,16 @@
         "nodemon": "^1.19.3"
     },
     "devDependencies": {
-        "concurrently": "^4.1.2"
+        "concurrently": "^4.1.2",
+        "eslint": "^6.6.0",
+        "eslint-config-prettier": "^6.5.0",
+        "eslint-plugin-graphql": "^3.1.0",
+        "eslint-plugin-jest": "^23.0.3",
+        "prettier": "^1.19.0"
+    },
+    "prettier": {
+        "trailingComma": "all",
+        "tabWidth": 4,
+        "singleQuote": true
     }
 }
