@@ -6,58 +6,53 @@
 
 This is a simple reading list web application which is built using:
 
-- Frontend: _React, Apollo_
+-   Frontend: _React, Apollo_
 
-- Backend: _Node.js Express + GraphQL_
+-   Backend: _Node.js Express + GraphQL_
 
-- Database: _MongoDB_
+-   Database: _MongoDB_
 
-## Installation
+## Requirements
 
-Use the package manager [npm](https://docs.npmjs.com/cli/install) to install the all dependencies.
+-   [Node.js](https://nodejs.org/en/) v11 OR above
+
+-   Package manager [npm](https://docs.npmjs.com/cli/install) to install the all dependencies
+
+-   Setup a [MongoDB](https://www.mongodb.com/) account and create a database there
+
+-   Setup environment variables in `.env` file, place it in the `/server` folder
+    -   _Reference: `.env.example`_
+
+## Setup for Ubuntu
+
+This project is tested and develop on Ubuntu 18.04 LTS.
+
+### Bash Script :page_with_curl:
 
 ```bash
-npm install
+./setup.sh
+./run.sh
 ```
 
-## Usage
-
-Create an `.env` file in the `server` folder. _This step is crucial if you want to use Docker_
-
-```
-$ cd server
-$ touch .env
-```
-
-Example of how your `.env` file should look like:
-
-```
-MONGO_USER=your_own_username
-MONGO_PASSWORD=your_super_secretive_password
-MONGO_DB=your_wonderful_database_name
-```
-
-### Normal deployment
+### Manual Way :wrench:
 
 Starting the GraphQL API backend server first:
 
-```
+```bash
 cd server
-npm
+npm start
 ```
 
 `cd` back to the project directory, then start the React frontend:
 
-```
+```bash
 cd client
 npm start
 ```
 
-Enjoy!
+### Docker :whale:
 
-### Using Docker
-
-Make sure you have Docker installed in your machine
+Make sure you have [Docker](https://docs.docker.com/install/linux/docker-ce/ubuntu/) installed on your machine
 
 ```
 docker-compose build
