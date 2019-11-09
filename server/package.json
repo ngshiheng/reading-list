@@ -1,25 +1,24 @@
 {
-  "name": "server",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "nodemon app.js",
-    "start_concurrently": "concurrently \"npm run server\" \"cd ../client && npm start\"",
-    "server": "nodemon app.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^8.1.0",
-    "express": "^4.17.1",
-    "express-graphql": "^0.9.0",
-    "graphql": "^14.5.6",
-    "mongoose": "^5.7.1",
-    "nodemon": "^1.19.3"
-  },
-  "devDependencies": {
-    "concurrently": "^4.1.2"
-  }
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "nodemon app.js",
+        "dev": "concurrently \"npm run start\" \"cd ../client && npm start\""
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^8.1.0",
+        "express": "^4.17.1",
+        "express-graphql": "^0.9.0",
+        "graphql": "^14.5.6",
+        "mongoose": "^5.7.9",
+        "nodemon": "^1.19.3"
+    },
+    "devDependencies": {
+        "concurrently": "^4.1.2"
+    }
 }
